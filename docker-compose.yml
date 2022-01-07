@@ -14,8 +14,9 @@ services:
           - "8889:8889"
           - "8000:8000"
           - "10000-10300:10000-10300/udp"
-#        volumes:
-#         - ./conf:/opt/janus/etc/janus
+        volumes:
+          - ./conf:/opt/janus/etc/janus
+          - ./certs:/opt/janus/share/janus/certs
         ulimits:
           nproc: 65535
           nofile:
